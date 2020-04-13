@@ -1,0 +1,25 @@
+class parameters:
+
+    STATEMENT_TRAN_HEADS = 8 # transformer 中的head的个数
+
+    DIFF_LEN = 100
+
+    INPUT_LEN = 1000
+
+    OUTPUT_LEN = 1000
+
+    EMBEDDING_SIZE = 128
+
+    TOKEN_SIZE = 1000 ## 需要确定
+    TOKEN_EMBEDDING_SIZE = EMBEDDING_SIZE
+    CHAR_PER_TOKEN = 15 #需要确定
+
+    CHAR_SIZE = 1000 # 需要确定
+    CHAR_EMBEDDING_SIZE = EMBEDDING_SIZE
+
+    RULE_SIZE = 1000 # 需要确定
+    RULE_EMBEDDING_SIZE = 128
+
+    TARGET_LEN = 1000
+    RULE_SON_SIZE = 10
+

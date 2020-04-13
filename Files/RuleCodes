@@ -1,0 +1,848 @@
+$SimpleName -> $Copy
+$Expression -> $SimpleName
+$Name -> $SimpleName
+$SimpleType -> $Name
+$Type -> $SimpleType
+$Expression -> $MethodInvocation
+$Statements -> $Statement $Statements
+$Expressions -> $Expression
+$MethodInvocation -> $Expression . $SimpleName ( $Expressions )
+$Statement -> $ExpressionStatement
+$ExpressionStatement -> $MethodInvocation ;
+$MethodInvocation -> $Expression . $SimpleName ( )
+$Expression -> $StringLiteral
+$VariableDeclarationFragments -> $VariableDeclarationFragment
+$Statement -> $VariableDeclarationStatement
+$VariableDeclarationFragment -> $Name = $Expression
+$VariableDeclarationStatement -> $Type $VariableDeclarationFragments ;
+$MethodInvocation -> $SimpleName ( $Expressions )
+$Expressions -> $Expression , $Expression
+$Type -> $ParameterizedType
+$Statements -> $Statement
+$Block -> { $Statements }
+$ParameterizedType -> $Type < $Types >
+$StringLiteral -> $Copy
+$Expression -> $ClassInstanceCreation
+$Types -> $Type
+$NullLiteral -> null
+$Expression -> $NullLiteral
+$Expression -> $QualifiedName
+$Expression -> $InfixExpression
+$TypeLiteral -> $Type . class
+$Expression -> $TypeLiteral
+$Types -> $Type , $Type
+$Statement -> $Block
+$Expression -> $NumberLiteral
+$ClassInstanceCreation -> new $Type ( $Expressions )
+$SingleVariableDeclaration -> $Type $SimpleName
+$ClassInstanceCreation -> new $Type ( )
+$Statement -> $IfStatement
+$ExpressionStatement -> $Assignment ;
+$IfStatement -> if ( $Expression ) $Statement
+$QualifiedName -> $Copy
+$Expression -> $SingleVariableDeclaration
+$Expression -> $BooleanLiteral
+$Expressions -> $Expression , $Expression , $Expression
+$Type -> $PrimitiveType
+$NumberLiteral -> $Copy
+$MethodInvocation -> $SimpleName ( )
+$SimpleName -> SimpleName0
+$SimpleName -> SimpleName1
+$SimpleName -> SimpleName2
+$SimpleName -> SimpleName3
+$SimpleName -> SimpleName4
+$SimpleName -> SimpleName5
+$SimpleName -> SimpleName6
+$SimpleName -> SimpleName7
+$Modifier -> public
+$SimpleName -> SimpleName8
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression
+$Expressions -> $Expression , $Expression , $Expression , $Expression
+$SimpleName -> SimpleName9
+$Assignment -> $SimpleName = $MethodInvocation
+$SimpleName -> SimpleName10
+$SimpleName -> SimpleName11
+$SimpleName -> String
+$SimpleName -> SimpleName12
+$StringLiteral -> StringLiteral0
+$BooleanLiteral -> false
+$SimpleName -> SimpleName13
+$Statement -> $ReturnStatement
+$SimpleName -> SimpleName14
+$PrimitiveType -> void
+$SimpleName -> SimpleName15
+$ReturnStatement -> return $Expression ;
+$SimpleName -> SimpleName16
+$BooleanLiteral -> true
+$SimpleName -> SimpleName17
+$StringLiteral -> StringLiteral1
+$InfixExpression -> $Expression != $Expression
+$SimpleName -> SimpleName18
+$Statement -> $EnhancedForStatement
+$EnhancedForStatement -> for ( $SingleVariableDeclaration : $Expression ) $Block
+$InfixExpression -> $Expression == $Expression
+$SimpleName -> SimpleName19
+$ParameterizedType -> $Type < >
+$SimpleName -> SimpleName20
+$QualifiedName -> QualifiedName0
+$SimpleName -> SimpleName21
+$Modifier -> final
+$StringLiteral -> StringLiteral2
+$SimpleName -> SimpleName22
+$VariableDeclarationStatement -> $Modifier $Type $VariableDeclarationFragments ;
+$Expression -> $PrefixExpression
+$SimpleName -> SimpleName23
+$SimpleName -> SimpleName24
+$Assignment -> $SimpleName = $ClassInstanceCreation
+$Name -> $QualifiedName
+$SimpleName -> SimpleName25
+$StringLiteral -> StringLiteral3
+$SimpleName -> SimpleName26
+$PrefixExpression -> ! $Expression
+$SimpleName -> SimpleName27
+$SimpleName -> SimpleName28
+$IfStatement -> if ( $Expression ) $Statement else $Statement
+$SimpleName -> Map
+$MethodDeclaration -> $Modifier $Type $SimpleName ( ) throws $Types $Block
+$SimpleName -> SimpleName29
+$SimpleName -> SimpleName30
+$StringLiteral -> StringLiteral4
+$SimpleName -> Exception
+$SimpleName -> SimpleName31
+$SimpleName -> SimpleName32
+$QualifiedName -> QualifiedName1
+$SimpleName -> SimpleName33
+$Statement -> $ThrowStatement
+$StringLiteral -> StringLiteral5
+$ThrowStatement -> throw $Expression ;
+$InfixExpression -> $Expression + $Expression
+$SimpleName -> SimpleName34
+$Expression -> $CastExpression
+$Statement -> $TryStatement
+$SimpleName -> SimpleName35
+$SimpleName -> SimpleName36
+$InfixExpression -> $Expression && $Expression
+$CatchClause -> catch ( $SingleVariableDeclaration ) $Block
+$SimpleName -> add
+$SimpleName -> SimpleName37
+$StringLiteral -> StringLiteral6
+$SimpleName -> get
+$SimpleName -> put
+$SimpleName -> SimpleName38
+$SimpleName -> SimpleName39
+$TryStatement -> try $Block $CatchClauses
+$SimpleName -> SimpleName40
+$CatchClauses -> $CatchClause
+$SimpleName -> HashMap
+$SimpleName -> SimpleName41
+$StringLiteral -> StringLiteral7
+$SimpleName -> Set
+$SimpleName -> SimpleName42
+$SimpleName -> List
+$SimpleName -> assertEquals
+$SimpleName -> SimpleName43
+$MethodDeclaration -> $Modifier $Type $SimpleName ( $Expressions ) throws $Types $Block
+$QualifiedName -> QualifiedName2
+$MethodDeclaration -> $Modifier $Type $SimpleName ( $Expressions ) $Block
+$SimpleName -> SimpleName44
+$StringLiteral -> StringLiteral8
+$SimpleName -> SimpleName45
+$NumberLiteral -> NumberLiteral0
+$SimpleName -> SimpleName46
+$SimpleName -> AmbariException
+$SimpleName -> Cluster
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$ParenthesizedExpression -> ( $Expression )
+$Statement -> $SwitchCase
+$NumberLiteral -> 1
+$SimpleName -> SimpleName47
+$ClassInstanceCreation -> new $Type ( ) $AnonymousClassDeclaration
+$SimpleName -> SimpleName48
+$BodyDeclarations -> $BodyDeclaration
+$AnonymousClassDeclaration -> { $BodyDeclarations }
+$StringLiteral -> StringLiteral9
+$Expression -> $ParenthesizedExpression
+$NumberLiteral -> 0
+$BreakStatement -> break ;
+$Statement -> $BreakStatement
+$SimpleName -> SimpleName49
+$SwitchCase -> case $Expression :
+$SimpleName -> cluster
+$SimpleName -> SimpleName50
+$SimpleName -> Collections
+$SimpleName -> HashSet
+$SimpleName -> size
+$StringLiteral -> StringLiteral10
+$SimpleName -> SimpleName51
+$PrimitiveType -> boolean
+$InfixExpression -> $Expression || $Expression
+$QualifiedName -> QualifiedName3
+$CastExpression -> ( $SimpleType ) $MethodInvocation
+$InfixExpression -> $Expression + $Expression + $Expression
+$Expression -> $ThisExpression
+$ThisExpression -> this
+$SimpleName -> SimpleName52
+$Expressions -> $Expression , $Expressions
+$SimpleName -> LOG
+$StringLiteral -> StringLiteral11
+$SimpleName -> request
+$SimpleName -> equals
+$SimpleName -> SimpleName53
+$SimpleName -> clusters
+$MethodDeclaration -> $Modifier $Type $SimpleName ( ) $Block
+$SimpleName -> Assert
+$SimpleName -> getCluster
+$SimpleName -> SimpleName54
+$SimpleName -> ArrayList
+$Modifier -> private
+$SimpleName -> expect
+$StringLiteral -> StringLiteral12
+$SimpleName -> SimpleName55
+$VariableDeclarationFragment -> $Name
+$SimpleName -> andReturn
+$SimpleName -> SimpleName56
+$PrimitiveType -> int
+$StringLiteral -> StringLiteral13
+$SimpleName -> e
+$FieldAccess -> $Expression . $SimpleName
+$MethodInvocation -> $Expression . < $Types > $SimpleName ( )
+$SimpleName -> SimpleName57
+$SimpleName -> Object
+$StringLiteral -> StringLiteral14
+$QualifiedName -> QualifiedName4
+$SimpleName -> isEmpty
+$SimpleName -> SimpleName58
+$NumberLiteral -> NumberLiteral1
+$SimpleName -> SimpleName59
+$SimpleName -> SimpleName60
+$StringLiteral -> StringLiteral15
+$Initializer -> $Block
+$BodyDeclaration -> $Initializer
+$SimpleName -> SimpleName61
+$SimpleName -> getClusterName
+$SimpleName -> SimpleName62
+$SimpleName -> StackId
+$SimpleName -> getName
+$SimpleName -> SimpleName63
+$PrimitiveType -> long
+$SimpleName -> getInstance
+$SimpleName -> injector
+$SimpleName -> anyTimes
+$StringLiteral -> StringLiteral16
+$Assignment -> $SimpleName = $SimpleName
+$SimpleName -> assertTrue
+$SimpleName -> replay
+$SimpleName -> SimpleName64
+$SimpleName -> Request
+$SimpleName -> properties
+$SimpleName -> createNiceMock
+$BodyDeclaration -> $MethodDeclaration
+$SimpleName -> clusterName
+$QualifiedName -> QualifiedName5
+$SimpleName -> SimpleName65
+$SimpleName -> toString
+$SimpleName -> SimpleName66
+$SimpleName -> Service
+$SimpleName -> SimpleName67
+$ConditionalExpression -> $Expression ? $Expression : $Expression
+$StringLiteral -> StringLiteral17
+$SimpleName -> assertNotNull
+$SimpleName -> info
+$SimpleName -> Long
+$Dimension -> []
+$ArrayInitializer -> { $Expressions }
+$SimpleName -> SimpleName68
+$ArrayCreation -> new $Type [] $ArrayInitializer
+$Block -> { }
+$SimpleName -> SimpleName69
+$StringLiteral -> StringLiteral18
+$Expression -> $ConditionalExpression
+$StringLiteral -> StringLiteral19
+$ArrayType -> $Type $Dimensions
+$SimpleName -> SimpleName70
+$SimpleName -> SimpleName71
+$ArrayAccess -> $Expression [ $Expression ]
+$QualifiedName -> QualifiedName6
+$NumberLiteral -> NumberLiteral2
+$Expression -> $ArrayCreation
+$PostfixExpression -> $Expression ++
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$Dimensions -> $Dimension
+$ContinueStatement -> continue ;
+$Statement -> $ContinueStatement
+$StringLiteral -> StringLiteral20
+$Type -> $ArrayType
+$Assignment -> $FieldAccess = $SimpleName
+$SimpleName -> SimpleName72
+$SimpleName -> SimpleName73
+$StringLiteral -> StringLiteral21
+$SimpleName -> SimpleName74
+$Modifier -> protected
+$Assignment -> $SimpleName = $BooleanLiteral
+$InfixExpression -> $Expression > $Expression
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression
+$SimpleName -> SimpleName75
+$StringLiteral -> StringLiteral22
+$SimpleName -> SimpleName76
+$SimpleName -> SimpleName77
+$NumberLiteral -> NumberLiteral3
+$SimpleName -> SimpleName78
+$QualifiedName -> QualifiedName7
+$StringLiteral -> StringLiteral23
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$SimpleName -> SimpleName79
+$SimpleName -> SimpleName80
+$InfixExpression -> $Expression < $Expression
+$StringLiteral -> StringLiteral24
+$Expression -> $PostfixExpression
+$InfixExpression -> $Expression * $Expression
+$SimpleName -> SimpleName82
+$SimpleName -> SimpleName81
+$SimpleName -> SimpleName83
+$SimpleName -> SimpleName84
+$QualifiedName -> QualifiedName8
+$PrefixExpression -> - $Expression
+$CastExpression -> ( $SimpleType ) $SimpleName
+$SimpleName -> SimpleName86
+$SimpleName -> SimpleName85
+$StringLiteral -> StringLiteral25
+$Assignment -> $QualifiedName = $StringLiteral
+$NumberLiteral -> NumberLiteral4
+$SimpleName -> SimpleName87
+$Expression -> $ArrayAccess
+$CastExpression -> ( $ParameterizedType ) $MethodInvocation
+$SimpleName -> SimpleName88
+$SimpleName -> SimpleName89
+$SimpleName -> SimpleName90
+$Assignment -> $SimpleName = $InfixExpression
+$ReturnStatement -> return ;
+$QualifiedName -> QualifiedName9
+$MethodDeclaration -> $Modifier $SimpleName ( $Expressions ) $Block
+$SimpleName -> SimpleName91
+$Assignment -> $SimpleName = $QualifiedName
+$SimpleName -> SimpleName93
+$SimpleName -> SimpleName92
+$StringLiteral -> StringLiteral26
+$Expression -> $FieldAccess
+$WhileStatement -> while ( $Expression ) $Statement
+$Statement -> $WhileStatement
+$SimpleName -> SimpleName95
+$SimpleName -> SimpleName94
+$SimpleName -> SimpleName96
+$InfixExpression -> $Expression - $Expression
+$TryStatement -> try $Block finally $Block
+$Statement -> $ForStatement
+$Expression -> $VariableDeclarationExpression
+$VariableDeclarationExpression -> $Type $VariableDeclarationFragments
+$CastExpression -> ( $SimpleType ) $ArrayAccess
+$SingleVariableDeclaration -> $Modifier $Type $SimpleName
+$SimpleName -> SimpleName97
+$StringLiteral -> StringLiteral27
+$ForStatement -> for ( $Expressions ; $Expression ; $Expressions ) $Statement
+$QualifiedName -> QualifiedName10
+$Types -> $Type , $Type , $Type , $Type
+$SimpleName -> SimpleName98
+$ExpressionStatement -> $PostfixExpression ;
+$StringLiteral -> StringLiteral28
+$Expression -> $InstanceofExpression
+$Statement -> $SwitchStatement
+$InstanceofExpression -> $Expression instanceof $Type
+$SwitchStatement -> switch ( $Expression ) { $Statements }
+$SimpleName -> SimpleName99
+$StringLiteral -> StringLiteral29
+$NumberLiteral -> NumberLiteral5
+$SimpleName -> SimpleName100
+$SimpleName -> SimpleName101
+$Type -> $WildcardType
+$SimpleName -> SimpleName102
+$SimpleName -> SimpleName103
+$StringLiteral -> StringLiteral30
+$SimpleName -> SimpleName104
+$StringLiteral -> StringLiteral31
+$SimpleName -> SimpleName105
+$SimpleName -> SimpleName106
+$Modifier -> public static
+$SimpleName -> SimpleName107
+$SimpleName -> SimpleName109
+$PrimitiveType -> byte
+$CastExpression -> ( $SimpleType ) $NullLiteral
+$SimpleName -> SimpleName108
+$SwitchCase -> default :
+$QualifiedName -> QualifiedName11
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$StringLiteral -> StringLiteral32
+$Assignment -> $SimpleName = $CastExpression
+$SimpleName -> SimpleName110
+$PrefixExpression -> ++ $Expression
+$Assignment -> $QualifiedName = $QualifiedName
+$StringLiteral -> StringLiteral33
+$SimpleName -> SimpleName111
+$SimpleName -> SimpleName113
+$BodyDeclarations -> $BodyDeclaration $BodyDeclarations
+$QualifiedName -> QualifiedName12
+$StringLiteral -> StringLiteral34
+$StringLiteral -> StringLiteral35
+$SimpleName -> SimpleName112
+$Expression -> $CharacterLiteral
+$SimpleName -> SimpleName114
+$Assignment -> $SimpleName = $StringLiteral
+$Assignment -> $SimpleName = $ArrayCreation
+$StringLiteral -> StringLiteral36
+$SimpleName -> SimpleName115
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression
+$Statement -> $SuperConstructorInvocation
+$Assignment -> $SimpleName = $NumberLiteral
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$StringLiteral -> StringLiteral37
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$Assignment -> $QualifiedName = $SimpleName
+$SimpleName -> SimpleName116
+$SuperConstructorInvocation -> super ( $Expressions ) ;
+$QualifiedName -> QualifiedName13
+$NumberLiteral -> NumberLiteral6
+$StringLiteral -> StringLiteral38
+$Assignment -> $SimpleName = $NullLiteral
+$SimpleName -> SimpleName117
+$MethodInvocation -> $Expression . < $Types > $SimpleName ( $Expressions )
+$Assignment -> $FieldAccess = $MethodInvocation
+$SimpleName -> SimpleName119
+$SimpleName -> SimpleName118
+$Assignment -> $SimpleName += $MethodInvocation
+$StringLiteral -> StringLiteral39
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$StringLiteral -> StringLiteral41
+$StringLiteral -> StringLiteral40
+$Modifier -> public synchronized
+$CharacterLiteral -> CharacterLiteral0
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$SimpleName -> SimpleName122
+$SimpleName -> SimpleName120
+$SimpleName -> SimpleName121
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$InfixExpression -> $Expression <= $Expression
+$StringLiteral -> StringLiteral42
+$SimpleName -> SimpleName130
+$SimpleName -> SimpleName131
+$SimpleName -> SimpleName132
+$SimpleName -> SimpleName126
+$SimpleName -> SimpleName127
+$SimpleName -> SimpleName128
+$SimpleName -> SimpleName129
+$SimpleName -> SimpleName123
+$SimpleName -> SimpleName125
+$WildcardType -> ? extends $Type
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$AnonymousClassDeclaration -> { }
+$WildcardType -> ?
+$SimpleName -> SimpleName124
+$QualifiedName -> QualifiedName14
+$Assignment -> $QualifiedName = $ClassInstanceCreation
+$StringLiteral -> StringLiteral47
+$StringLiteral -> StringLiteral43
+$StringLiteral -> StringLiteral44
+$StringLiteral -> StringLiteral45
+$StringLiteral -> StringLiteral46
+$CatchClauses -> $CatchClause $CatchClause
+$SimpleName -> SimpleName133
+$SimpleName -> SimpleName134
+$SimpleName -> SimpleName135
+$SimpleName -> SimpleName136
+$QualifiedName -> QualifiedName15
+$StringLiteral -> StringLiteral48
+$SimpleName -> SimpleName137
+$SimpleName -> SimpleName138
+$SimpleName -> SimpleName139
+$InfixExpression -> $Expression && $Expression && $Expression
+$TryStatement -> try $Block $CatchClauses finally $Block
+$Assignment -> $QualifiedName = $MethodInvocation
+$SimpleName -> SimpleName140
+$QualifiedName -> QualifiedName16
+$SimpleName -> SimpleName145
+$SimpleName -> SimpleName141
+$SimpleName -> SimpleName142
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$Assignment -> $FieldAccess = $ClassInstanceCreation
+$Assignment -> $SimpleName |= $MethodInvocation
+$SimpleName -> SimpleName144
+$SimpleName -> SimpleName146
+$SimpleName -> SimpleName143
+$StringLiteral -> StringLiteral50
+$StringLiteral -> StringLiteral51
+$StringLiteral -> StringLiteral52
+$StringLiteral -> StringLiteral49
+$SimpleName -> SimpleName151
+$SimpleName -> SimpleName152
+$SimpleName -> SimpleName153
+$SimpleName -> SimpleName154
+$SimpleName -> SimpleName148
+$SimpleName -> SimpleName149
+$StringLiteral -> StringLiteral53
+$StringLiteral -> StringLiteral54
+$SimpleName -> SimpleName147
+$SimpleName -> SimpleName150
+$ExpressionStatement -> $SuperMethodInvocation ;
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$StringLiteral -> StringLiteral55
+$PrimitiveType -> char
+$SimpleName -> SimpleName155
+$SimpleName -> SimpleName156
+$SimpleName -> SimpleName157
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$SuperMethodInvocation -> super . $Name ( $Expressions )
+$SimpleName -> SimpleName159
+$SimpleName -> SimpleName158
+$SimpleName -> SimpleName160
+$SimpleName -> SimpleName161
+$CastExpression -> ( $SimpleType ) $ParenthesizedExpression
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$SuperMethodInvocation -> super . $Name ( )
+$Assignment -> $SimpleName = $ConditionalExpression
+$Dimensions -> $Dimension $Dimension
+$Type -> $UnionType
+$ArrayCreation -> new $Type [ $Expression ]
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$SimpleName -> SimpleName162
+$QualifiedName -> QualifiedName17
+$NumberLiteral -> NumberLiteral7
+$SimpleName -> SimpleName166
+$SimpleName -> SimpleName167
+$SimpleName -> SimpleName168
+$SimpleName -> SimpleName169
+$SimpleName -> SimpleName163
+$SimpleName -> SimpleName164
+$SimpleName -> SimpleName165
+$SimpleName -> SimpleName170
+$Expression -> $SuperMethodInvocation
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$InfixExpression -> $Expression >= $Expression
+$Expression -> $ArrayInitializer
+$ExpressionStatement -> $PrefixExpression ;
+$Assignment -> $QualifiedName = $BooleanLiteral
+$Expression -> $LambdaExpression
+$StringLiteral -> StringLiteral56
+$SimpleName -> SimpleName171
+$InfixExpression -> $Expression / $Expression
+$ClassInstanceCreation -> new $Type ( $Expressions ) $AnonymousClassDeclaration
+$MethodDeclaration -> $Modifier $SimpleName ( ) $Block
+$Modifier -> private synchronized
+$LambdaExpression -> $VariableDeclarations -> $ASTNode
+$ASTNode -> $MethodInvocation
+$StringLiteral -> StringLiteral58
+$StringLiteral -> StringLiteral59
+$StringLiteral -> StringLiteral57
+$SimpleName -> SimpleName173
+$SimpleName -> SimpleName174
+$SimpleName -> SimpleName172
+$CastExpression -> ( $ArrayType ) $MethodInvocation
+$VariableDeclaration -> $VariableDeclarationFragment
+$QualifiedName -> QualifiedName18
+$VariableDeclarations -> $VariableDeclaration
+$VariableDeclarationFragments -> $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment
+$Modifier -> static
+$NumberLiteral -> NumberLiteral8
+$CastExpression -> ( $PrimitiveType ) $MethodInvocation
+$SimpleName -> SimpleName175
+$SimpleName -> SimpleName176
+$StringLiteral -> StringLiteral61
+$StringLiteral -> StringLiteral62
+$StringLiteral -> StringLiteral60
+$InfixExpression -> $Expression | $Expression
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$SimpleName -> SimpleName184
+$SimpleName -> SimpleName177
+$SimpleName -> SimpleName178
+$SimpleName -> SimpleName179
+$SimpleName -> SimpleName180
+$SimpleName -> SimpleName181
+$SimpleName -> SimpleName182
+$SimpleName -> SimpleName183
+$Modifier -> private static
+$MethodDeclaration -> $Type $SimpleName ( ) $Block
+$StringLiteral -> StringLiteral63
+$StringLiteral -> StringLiteral64
+$StringLiteral -> StringLiteral65
+$StringLiteral -> StringLiteral66
+$StringLiteral -> StringLiteral67
+$UnionType -> $Type | $Type
+$SimpleName -> SimpleName195
+$SimpleName -> SimpleName196
+$SimpleName -> SimpleName197
+$SimpleName -> SimpleName188
+$SimpleName -> SimpleName189
+$SimpleName -> SimpleName185
+$SimpleName -> SimpleName191
+$SimpleName -> SimpleName192
+$SimpleName -> SimpleName193
+$SimpleName -> SimpleName194
+$SimpleName -> SimpleName190
+$NumberLiteral -> NumberLiteral9
+$InfixExpression -> $Expression || $Expression || $Expression
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$StringLiteral -> StringLiteral80
+$StringLiteral -> StringLiteral81
+$StringLiteral -> StringLiteral82
+$StringLiteral -> StringLiteral72
+$StringLiteral -> StringLiteral73
+$StringLiteral -> StringLiteral74
+$StringLiteral -> StringLiteral77
+$StringLiteral -> StringLiteral78
+$StringLiteral -> StringLiteral70
+$StringLiteral -> StringLiteral71
+$StringLiteral -> StringLiteral69
+$StringLiteral -> StringLiteral68
+$CastExpression -> ( $PrimitiveType ) $CastExpression
+$InfixExpression -> $Expression && $Expression && $Expression && $Expression
+$SimpleName -> SimpleName199
+$SimpleName -> SimpleName198
+$SimpleName -> SimpleName186
+$SimpleName -> SimpleName187
+$SynchronizedStatement -> synchronized ( $Expression ) $Block
+$Statement -> $SynchronizedStatement
+$CastExpression -> ( $ParameterizedType ) $SimpleName
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$MethodDeclaration -> $Modifier $SimpleName ( $Expressions ) throws $Types $Block
+$Assignment -> $SimpleName = $ArrayAccess
+$SimpleName -> SimpleName203
+$SimpleName -> SimpleName200
+$SimpleName -> SimpleName201
+$SimpleName -> SimpleName202
+$Types -> $Type , $Type , $Type
+$StringLiteral -> StringLiteral83
+$StringLiteral -> StringLiteral75
+$StringLiteral -> StringLiteral76
+$StringLiteral -> StringLiteral79
+$NumberLiteral -> NumberLiteral10
+$MethodDeclaration -> $Type $SimpleName ( $Expressions ) $Block
+$MethodDeclaration -> $Type $SimpleName ( $Expressions ) throws $Types $Block
+$CharacterLiteral -> $Copy
+$StringLiteral -> StringLiteral108
+$StringLiteral -> StringLiteral109
+$StringLiteral -> StringLiteral104
+$StringLiteral -> StringLiteral105
+$StringLiteral -> StringLiteral106
+$StringLiteral -> StringLiteral107
+$StringLiteral -> StringLiteral111
+$StringLiteral -> StringLiteral112
+$StringLiteral -> StringLiteral113
+$StringLiteral -> StringLiteral114
+$StringLiteral -> StringLiteral110
+$StringLiteral -> StringLiteral115
+$StringLiteral -> StringLiteral100
+$StringLiteral -> StringLiteral101
+$StringLiteral -> StringLiteral102
+$StringLiteral -> StringLiteral103
+$CastExpression -> ( $PrimitiveType ) $SimpleName
+$StringLiteral -> StringLiteral94
+$StringLiteral -> StringLiteral95
+$StringLiteral -> StringLiteral96
+$StringLiteral -> StringLiteral97
+$StringLiteral -> StringLiteral98
+$StringLiteral -> StringLiteral99
+$StringLiteral -> StringLiteral90
+$StringLiteral -> StringLiteral91
+$StringLiteral -> StringLiteral92
+$StringLiteral -> StringLiteral93
+$StringLiteral -> StringLiteral84
+$StringLiteral -> StringLiteral85
+$StringLiteral -> StringLiteral86
+$StringLiteral -> StringLiteral87
+$StringLiteral -> StringLiteral88
+$StringLiteral -> StringLiteral89
+$Assignment -> $QualifiedName = $ConditionalExpression
+$InfixExpression -> $Expression % $Expression
+$InfixExpression -> $Expression * $Expression * $Expression
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$QualifiedName -> QualifiedName19
+$SimpleName -> SimpleName214
+$SimpleName -> SimpleName210
+$SimpleName -> SimpleName211
+$SimpleName -> SimpleName212
+$SimpleName -> SimpleName213
+$SimpleName -> SimpleName207
+$SimpleName -> SimpleName208
+$SimpleName -> SimpleName209
+$SimpleName -> SimpleName204
+$SimpleName -> SimpleName205
+$SimpleName -> SimpleName206
+$PrimitiveType -> double
+$ArrayInitializer -> { }
+$NumberLiteral -> NumberLiteral12
+$NumberLiteral -> NumberLiteral11
+$CatchClauses -> $CatchClause $CatchClause $CatchClause $CatchClause
+$MethodDeclaration -> $SimpleName ( $Expressions ) $Block
+$StringLiteral -> StringLiteral116
+$StringLiteral -> StringLiteral117
+$Assignment -> $SimpleName = $ParenthesizedExpression
+$CatchClauses -> $CatchClause $CatchClause $CatchClause
+$NumberLiteral -> NumberLiteral17
+$NumberLiteral -> NumberLiteral16
+$NumberLiteral -> NumberLiteral15
+$NumberLiteral -> NumberLiteral18
+$NumberLiteral -> NumberLiteral13
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$EnhancedForStatement -> for ( $SingleVariableDeclaration : $Expression ) $IfStatement
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$UnionType -> $Type | $Type | $Type
+$PrimitiveType -> float
+$InfixExpression -> $Expression & $Expression
+$QualifiedName -> QualifiedName31
+$QualifiedName -> QualifiedName30
+$QualifiedName -> QualifiedName22
+$QualifiedName -> QualifiedName21
+$QualifiedName -> QualifiedName24
+$QualifiedName -> QualifiedName23
+$QualifiedName -> QualifiedName20
+$QualifiedName -> QualifiedName29
+$QualifiedName -> QualifiedName26
+$QualifiedName -> QualifiedName25
+$QualifiedName -> QualifiedName28
+$QualifiedName -> QualifiedName27
+$SimpleName -> SimpleName221
+$SimpleName -> SimpleName222
+$SimpleName -> SimpleName220
+$SimpleName -> SimpleName218
+$SimpleName -> SimpleName219
+$SimpleName -> SimpleName215
+$SimpleName -> SimpleName216
+$SimpleName -> SimpleName217
+$PrimitiveType -> short
+$Assignment -> $ArrayAccess = $MethodInvocation
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$StringLiteral -> StringLiteral119
+$StringLiteral -> StringLiteral118
+$Statement -> $EmptyStatement
+$Expression -> $Assignment
+$NumberLiteral -> NumberLiteral14
+$NumberLiteral -> NumberLiteral19
+$Assignment -> $SimpleName += $StringLiteral
+$EmptyStatement -> ;
+$SimpleName -> SimpleName232
+$SimpleName -> SimpleName233
+$SimpleName -> SimpleName230
+$SimpleName -> SimpleName231
+$SimpleName -> SimpleName229
+$SimpleName -> SimpleName225
+$SimpleName -> SimpleName226
+$SimpleName -> SimpleName227
+$SimpleName -> SimpleName228
+$SimpleName -> SimpleName223
+$SimpleName -> SimpleName224
+$StringLiteral -> StringLiteral126
+$StringLiteral -> StringLiteral127
+$StringLiteral -> StringLiteral128
+$StringLiteral -> StringLiteral129
+$StringLiteral -> StringLiteral133
+$StringLiteral -> StringLiteral134
+$StringLiteral -> StringLiteral135
+$StringLiteral -> StringLiteral136
+$StringLiteral -> StringLiteral130
+$StringLiteral -> StringLiteral131
+$StringLiteral -> StringLiteral132
+$StringLiteral -> StringLiteral137
+$StringLiteral -> StringLiteral138
+$StringLiteral -> StringLiteral139
+$StringLiteral -> StringLiteral144
+$StringLiteral -> StringLiteral145
+$StringLiteral -> StringLiteral146
+$StringLiteral -> StringLiteral147
+$StringLiteral -> StringLiteral140
+$StringLiteral -> StringLiteral141
+$StringLiteral -> StringLiteral142
+$StringLiteral -> StringLiteral143
+$StringLiteral -> StringLiteral122
+$StringLiteral -> StringLiteral123
+$StringLiteral -> StringLiteral124
+$StringLiteral -> StringLiteral125
+$StringLiteral -> StringLiteral120
+$StringLiteral -> StringLiteral121
+$StringLiteral -> StringLiteral148
+$StringLiteral -> StringLiteral149
+$StringLiteral -> StringLiteral151
+$StringLiteral -> StringLiteral152
+$StringLiteral -> StringLiteral153
+$StringLiteral -> StringLiteral150
+$ArrayCreation -> new $Type [ $Expression ] [ $Expression ]
+$Modifier -> protected synchronized
+$Assignment -> $FieldAccess = $ConditionalExpression
+$DoStatement -> do $Block while ( $Expression ) ;
+$MethodDeclaration -> $Modifier < $TypeParameters > $Type $SimpleName ( $Expressions ) $Block
+$SingleVariableDeclaration -> $Type $SimpleName $Dimensions
+$EnhancedForStatement -> for ( $SingleVariableDeclaration : $Expression ) $ExpressionStatement
+$Modifier -> public abstract
+$NumberLiteral -> NumberLiteral27
+$NumberLiteral -> NumberLiteral26
+$NumberLiteral -> NumberLiteral25
+$NumberLiteral -> NumberLiteral20
+$NumberLiteral -> NumberLiteral24
+$NumberLiteral -> NumberLiteral23
+$NumberLiteral -> NumberLiteral22
+$NumberLiteral -> NumberLiteral21
+$NumberLiteral -> NumberLiteral30
+$MethodDeclaration -> $Modifier $Type $SimpleName ( $Expressions ) throws $Types ;
+$TypeParameters -> $TypeParameter
+$Assignment -> $FieldAccess = $CastExpression
+$SingleVariableDeclaration -> $Type ... $SimpleName
+$Assignment -> $SimpleName += $SimpleName
+$VariableDeclarationFragments -> $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment
+$Modifier -> private static synchronized
+$UnionType -> $Type | $Type | $Type | $Type
+$ForStatement -> for ( ; $Expression ; $Expressions ) $Statement
+$SuperConstructorInvocation -> super ( ) ;
+$TypeParameter -> $SimpleName
+$CastExpression -> ( $PrimitiveType ) $ArrayAccess
+$VariableDeclarationFragment -> $Name $Dimensions = $Expression
+$Assignment -> $FieldAccess = $NullLiteral
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$VariableDeclarationFragments -> $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment , $VariableDeclarationFragment
+$ExpressionStatement -> $ClassInstanceCreation ;
+$Statement -> $DoStatement
+$CastExpression -> ( $PrimitiveType ) $NumberLiteral
+$ASTNode -> $InfixExpression
+$LambdaExpression -> ( ) -> $ASTNode
+$Statement -> $ConstructorInvocation
+$InfixExpression -> $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression + $Expression
+$CharacterLiteral -> CharacterLiteral1
+$Assignment -> $QualifiedName = $NullLiteral
+$QualifiedName -> QualifiedName33
+$QualifiedName -> QualifiedName32
+$MethodDeclaration -> $Type $SimpleName ( ) throws $Types $Block
+$SimpleName -> SimpleName236
+$SimpleName -> SimpleName237
+$SimpleName -> SimpleName238
+$SimpleName -> SimpleName234
+$SimpleName -> SimpleName235
+$Assignment -> $SimpleName += $ConditionalExpression
+$CastExpression -> ( $PrimitiveType ) $ParenthesizedExpression
+$ForStatement -> for ( $Expressions ; $Expression ; ) $Statement
+$CastExpression -> ( $SimpleType ) $StringLiteral
+$InfixExpression -> $Expression - $Expression - $Expression - $Expression
+$Modifier -> public final
+$Assignment -> $FieldAccess = $ParenthesizedExpression
+$ConstructorInvocation -> this ( $Expressions ) ;
+$StringLiteral -> StringLiteral155
+$StringLiteral -> StringLiteral154
+$MethodDeclaration -> $Type $SimpleName ( ) ;
+$MethodDeclaration -> $Modifier $Type $SimpleName ( ) throws $Types ;
+$NumberLiteral -> NumberLiteral28
+$NumberLiteral -> NumberLiteral29
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$Assignment -> $SimpleName |= $QualifiedName
+$CastExpression -> ( $ArrayType ) $NullLiteral
+$Modifier -> protected static
+$InfixExpression -> $Expression && $Expression && $Expression && $Expression && $Expression && $Expression
+$InfixExpression -> $Expression && $Expression && $Expression && $Expression && $Expression
+$InfixExpression -> $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$MethodDeclaration -> $Type $SimpleName ( $Expressions ) ;
+$MethodDeclaration -> $Modifier $Type $SimpleName ( $Expressions ) ;
+$Expressions -> $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression , $Expression
+$QualifiedName -> QualifiedName35
+$QualifiedName -> QualifiedName34
+$QualifiedName -> QualifiedName37
+$QualifiedName -> QualifiedName36
+$InfixExpression -> $Expression || $Expression || $Expression || $Expression || $Expression
+$MethodDeclaration -> $Modifier $Type $SimpleName ( ) ;
+$MethodDeclaration -> $Type $SimpleName ( ) throws $Types ;
+$InfixExpression -> $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression || $Expression
